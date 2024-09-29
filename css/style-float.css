@@ -1,0 +1,72 @@
+* {
+	box-sizing: border-box;
+}
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-color: white;
+}
+
+.container {
+	width: 98%;
+	padding: 10px;
+	margin: 10px auto;
+	overflow: hidden;
+	background-color: lightgray;
+	border: 1px solid black;
+
+}
+
+.container::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.block {
+	height: 70px;
+	background-color: darkgrey;
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid black;
+}
+
+.block:not(.block--large) {
+	width: calc((100% - 120px) / 6);
+}
+
+.block--large {
+	width: calc((100% - 80px) / 4);
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.stacked .block {
+	width: 100%;
+}
+
+.stacked:not(.block--large) {
+	width: calc((100% - 120px) / 6);
+}
+
+.main {
+	float: left;
+	height: calc(70px * 2 + 10px);
+}
+
+.main--right {
+	margin-left: calc(((100% - 120px) / 6) * 4 + 90px);
+}
+
+.main--center {
+	margin-left: calc(((100% - ((100% - 80px) / 4 * 2)) / 2) - 10px);
+}
