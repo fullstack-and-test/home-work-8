@@ -27,7 +27,6 @@ html {
 	margin: 10px;
 	width: 100%;
 	border: 1px solid black;
-	
 }
 
 .block:not(.block--large),
@@ -58,12 +57,10 @@ html {
 
 .left {
 	margin-right: auto;
-	justify-content: flex-start;
 }
 
 .right {
-	margin-left: auto;
-	justify-content: flex-end
+	justify-content: flex-end;
 }
 
 .special {
